@@ -1,4 +1,43 @@
 /* Insert CSS for your popup */
 body {
-    width: 300px;
+    width: 400px;
+    font-family: "Nunito", sans-serif;
+}
+
+#time-header {
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 36px;
+}
+
+#time-hr-overwrite {
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#time-label{
+    font-size: 24px;
+}
+
+.center-el {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#time-before-convert{
+    border-style: solid;
+    border-width: 1px;
+    font-size: 24px;
+}
+
+#time-after-convert{
+    border-style: solid;
+    border-width: 1px;
+    font-size: 24px;
+}
+
+#time-convert-btn {
+    margin-left: 150px;
 }
