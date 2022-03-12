@@ -4,12 +4,109 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
 	<title>...</title>
 	<script src="popup.js"></script>
 </head>
 
 <body>
-  <h1>Hello World!</h1>
+	<div class="container center-el" id="time-header">
+		<div class="row">
+			<div class="col-2">
+				<img src="../icons/32x32.png">
+			</div>
+			<div class="col-10">
+				<h1>Time Zone Converter</h1>
+			</div>
+		</div>
+	</div>
+
+	<hr id="time-hr-overwrite">
+
+	<form class="container">
+		<div class="row">
+			<div class="col-10 center-el">
+				<label id="time-label" for="basic-url" class="form-label">Date & Time:</label>
+				<input id="time-before-convert" type="datetime-local" name="time-before-convert">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-10 center-el">
+				<div class="input-group">
+					<label class="input-group-text" for="inputGroupSelect01">GMT</label>
+					<label class="visually-hidden" for="inlineFormSelectPref">Time Zone</label>
+					<select class="form-select" id="inlineFormSelectPref">
+						<option selected>Select Time Zone</option>
+						<option value="1">-9</option>
+						<option value="2">-8</option>
+						<option value="3">-7</option>
+						<option value="4">-6</option>
+						<option value="5">-5</option>
+						<option value="6">-4</option>
+						<option value="7">-3</option>
+						<option value="8">-2</option>
+						<option value="9">-1</option>
+						<option value="10">0</option>
+						<option value="11">+1</option>
+						<option value="12">+2</option>
+						<option value="13">+3</option>
+						<option value="14">+4</option>
+						<option value="15">+5</option>
+						<option value="16">+6</option>
+						<option value="17">+7</option>
+						<option value="18">+8</option>
+						<option value="19">+9</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</form>
+	<br>
+	<button id="time-convert-btn" type="button" class="center-el">Convert!</button>
+	<br>
+	<br>
+	<form class="container">
+		<div class="row">
+			<div class="col-10 center-el">
+				<label id="time-label" for="basic-url" class="form-label">Date & Time:</label>
+				<input id="time-after-convert" type="datetime-local" name="time-before-convert" readonly>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-10 center-el">
+				<div class="input-group">
+					<label class="input-group-text" for="inputGroupSelect01">GMT</label>
+					<label class="visually-hidden" for="inlineFormSelectPref">Time Zone</label>
+					<select class="form-select" id="inlineFormSelectPref">
+						<option selected>Select Time Zone</option>
+						<option value="1">-9</option>
+						<option value="2">-8</option>
+						<option value="3">-7</option>
+						<option value="4">-6</option>
+						<option value="5">-5</option>
+						<option value="6">-4</option>
+						<option value="7">-3</option>
+						<option value="8">-2</option>
+						<option value="9">-1</option>
+						<option value="10">0</option>
+						<option value="11">+1</option>
+						<option value="12">+2</option>
+						<option value="13">+3</option>
+						<option value="14">+4</option>
+						<option value="15">+5</option>
+						<option value="16">+6</option>
+						<option value="17">+7</option>
+						<option value="18">+8</option>
+						<option value="19">+9</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</form>
+	<p id="time-error-text">Any error text can appear here.</p>
 </body>
 
 </html>
