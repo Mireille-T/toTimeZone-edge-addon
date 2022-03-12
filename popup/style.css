@@ -1,6 +1,7 @@
 #time-body-overwrite {
     width: 360px;
     font-family: "Fredoka", sans-serif;
+    background-color: #fafafa;
 }
 
 header{
@@ -22,7 +23,7 @@ p{
 }
 
 #time-hr-overwrite {
-    width: 360px;
+    width: 300px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
@@ -65,4 +66,8 @@ p{
 
 #time-error-text{
     color:rgb(211, 53, 53);
+}
+
+#time-after-convert{
+    color: rgba(33, 37, 41, 0.4);
 }
