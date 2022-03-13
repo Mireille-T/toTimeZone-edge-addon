@@ -1,5 +1,5 @@
 {
-	"name": "time-zone-converter",
+	"name": "toTimeZone()",
 	"version": "1.0.0",
 	"author": "Raymond Wangsa Putra, Mireille Tan",
 	"manifest_version": 3,
