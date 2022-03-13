@@ -66,6 +66,7 @@ p{
 
 #time-error-text{
     color:rgb(211, 53, 53);
+    display: none;
 }
 
 #time-after-convert{
