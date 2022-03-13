@@ -1,4 +1,6 @@
 # toTimeZone() - A Time Zone Converter Add-on 🌐🕓
+Authors: Raymond Wangsa Putra and Mireille Tan
+
  ![Time Zone Converter Icon](/icons/128x128.png)
 ## Description
 Have you ever saw an event being hosted at a certain time in a certain time zone, and had to convert it manually or by opening a new tab online? With this add-on, you can convert time zones in one tab!
