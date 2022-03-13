@@ -58,8 +58,9 @@ function processConvert() {
         hour: "2-digit",
         minute: "2-digit",
         timeZone: getTimezoneForTarget(gmtTarget),
+        hc: "h23"
     };
-    let targetDate = Intl.DateTimeFormat("en", options).format(dateindate);
+    let targetDate = Intl.DateTimeFormat("en-GB", options).format(dateindate);
     setTargetDate(targetDate);
 }
 
@@ -123,7 +124,7 @@ function setTargetDate(targetDate) {
     let month = date[1];
     let year = date[2];
 
-    dateTargetElement.value = year + "-" + day + "-" + month + "T" + time;
+    dateTargetElement.value = year + "-" + month + "-" + day + "T" + time;
 }
 
 function getValueFromId(id) {
