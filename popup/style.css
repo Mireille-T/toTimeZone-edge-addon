@@ -75,3 +75,11 @@ p{
 #time-exchange-icon{
     transform: rotateZ(90deg) scale(1.8);
 }
+
+#time-hr-header{
+    background: linear-gradient(to right, #279bdf, #db0173);
+    height: 8px;
+    width: 360px;
+    margin: 0;
+    opacity: 1;
+}
