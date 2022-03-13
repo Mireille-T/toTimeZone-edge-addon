@@ -3,16 +3,16 @@ window.onload = function () {
     convertButton.addEventListener("click", processConvert);
 
     let switchElement = document.getElementById("time-exchange-icon");
-    switchElement.onclick = function() {
+    switchElement.onclick = function () {
         let gmtBeforeElement = document.getElementById("fromInlineFormSelectPref");
         let gmtAfterElement = document.getElementById("targetInlineFormSelectPref");
-    
-        let beforeValue = gmtBeforeElement.value
-        let afterValue = gmtAfterElement.value
-    
-        gmtBeforeElement.value = afterValue
-        gmtAfterElement.value = beforeValue
-        console.log("SWITCHED");
+
+        let beforeValue = gmtBeforeElement.value;
+        let afterValue = gmtAfterElement.value;
+
+        gmtBeforeElement.value = afterValue;
+        gmtAfterElement.value = beforeValue;
+        //console.log("SWITCHED");
     }
 };
 
@@ -31,12 +31,12 @@ function processConvert() {
     } else if (gmtFrom == "default") {
         errorText.textContent =
             "Please select the time zone you want to convert from!";
-            timeAfterConvert.style.color = "rgba(33, 37, 41, 0.4)";
+        timeAfterConvert.style.color = "rgba(33, 37, 41, 0.4)";
         return;
     } else if (gmtTarget == "default") {
         errorText.textContent =
             "Please select the time zone you want to convert to!";
-            timeAfterConvert.style.color = "rgba(33, 37, 41, 0.4)";
+        timeAfterConvert.style.color = "rgba(33, 37, 41, 0.4)";
         return;
     } else {
         errorText.textContent = "";
@@ -49,7 +49,7 @@ function processConvert() {
 
     let dateindate = new Date(date + " " + time + " " + getTimezoneForFrom(gmtFrom));
 
-    console.log(dateindate);
+    //console.log(dateindate);
     let options = {
         hour12: false,
         year: "numeric",
@@ -97,7 +97,7 @@ function getTimezoneForTarget(timezoneInString) {
         } else if (timezoneInString.includes("-")) {
             timezoneInString = timezoneInString.replace("-", "+");
         }
-        console.log("Etc/GMT" + timezoneInString);
+        //console.log("Etc/GMT" + timezoneInString);
         return "Etc/GMT" + timezoneInString;
     }
 }
@@ -110,7 +110,7 @@ function getTimezoneForFrom(timezoneInString) {
 }
 
 function setTargetDate(targetDate) {
-    console.log("targetdate: " + targetDate);
+    //console.log("targetdate: " + targetDate);
     let dateTargetElement = document.getElementById("time-after-convert");
 
     let splitted = targetDate.split(", ");
