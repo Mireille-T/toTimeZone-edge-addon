@@ -1,6 +1,7 @@
 {
 	"name": "time-zone-converter",
 	"version": "1.0.0",
+	"author": "Raymond Wangsa Putra, Mireille Tan",
 	"manifest_version": 3,
 	"description": "Convert time zones in one tab!",
 	"icons":{
