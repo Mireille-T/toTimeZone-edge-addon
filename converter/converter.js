@@ -1,6 +1,19 @@
 window.onload = function () {
     let convertButton = document.getElementById("time-convert-btn");
     convertButton.addEventListener("click", processConvert);
+
+    let switchElement = document.getElementById("time-exchange-icon");
+    switchElement.onclick = function() {
+        let gmtBeforeElement = document.getElementById("fromInlineFormSelectPref");
+        let gmtAfterElement = document.getElementById("targetInlineFormSelectPref");
+    
+        let beforeValue = gmtBeforeElement.value
+        let afterValue = gmtAfterElement.value
+    
+        gmtBeforeElement.value = afterValue
+        gmtAfterElement.value = beforeValue
+        console.log("SWITCHED");
+    }
 };
 
 function processConvert() {
