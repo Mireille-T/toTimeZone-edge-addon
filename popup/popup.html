@@ -17,7 +17,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-3">
-					<img id="time-convert-icon" src="../icons/32x32.png">
+					<img id="time-convert-icon" src="../icons/128x128.png">
 				</div>
 				<div class="col-9">
 					<h1 id="time-convert-title">toTimeZone()</h1>
@@ -40,9 +40,9 @@
 				<div class="col center-el">
 					<div class="input-group">
 						<label class="input-group-text" for="inputGroupSelect01">GMT</label>
-						<label class="visually-hidden" for="inlineFormSelectPref">Time Zone</label>
-						<select class="form-select" id="inlineFormSelectPref">
-							<option selected>Select Time Zone</option>
+						<label class="visually-hidden" for="fromInlineFormSelectPref">Time Zone</label>
+						<select class="form-select" id="fromInlineFormSelectPref">
+							<option selected>-- Select Time Zone --</option>
 							<option value="-9">-9.00</option>
 							<option value="-8.30">-8.30</option>
 							<option value="-8">-8.00</option>
@@ -95,16 +95,16 @@
 				<div class="col center-el">
 					<label id="time-label" for="basic-url" class="form-label">Date & Time (Converted):</label>
 					<input id="time-after-convert" class="time-convert-field" type="datetime-local"
-						name="time-before-convert" readonly>
+						name="time-after-convert" readonly>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col center-el">
 					<div class="input-group">
 						<label class="input-group-text" for="inputGroupSelect01">GMT</label>
-						<label class="visually-hidden" for="inlineFormSelectPref">Time Zone</label>
-						<select class="form-select" id="inlineFormSelectPref">
-							<option selected>Select Time Zone</option>
+						<label class="visually-hidden" for="targetInlineFormSelectPref">Time Zone</label>
+						<select class="form-select" id="targetInlineFormSelectPref">
+							<option selected>-- Select Time Zone --</option>
 							<option value="-9">-9.00</option>
 							<option value="-8.30">-8.30</option>
 							<option value="-8">-8.00</option>
