@@ -70,10 +70,12 @@ p{
 
 #time-after-convert{
     color: rgba(33, 37, 41, 0.4);
+    cursor: not-allowed;
 }
 
 #time-exchange-icon{
     transform: rotateZ(90deg) scale(1.8);
+    cursor: pointer;
 }
 
 #time-hr-header{
