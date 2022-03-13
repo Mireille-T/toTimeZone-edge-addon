@@ -6,7 +6,7 @@ Have you ever saw an event being hosted at a certain time in a certain time zone
 1. Add our addon.
 2. Pin it to your addons bar.
 3. Whenever you see a time to convert, just select the date, time and time zones (to be converted and to convert), then click on the "Convert!" button!
-4.  !Screenshot of Add-on](/popup/popup.png)
+[!Screenshot of Add-on](/popup/popup.png)
 ## Possible Extensions
 - Time zone selection through location / time zone codes (e.g. UTC, IST, PT, etc.)
 - Support for 12h format
