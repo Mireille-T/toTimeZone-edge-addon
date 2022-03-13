@@ -55,7 +55,7 @@ function getTimezoneForTarget(timezoneInString) {
     // https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
     // check if the GMT time contain .30 minute
     //todo: make parser for the .30 one, must use swithcase for this
-    if (timezoneInString.includes(".00") == "false") {
+    if (timezoneInString.includes(".00") === false) {
         switch (timezoneInString) {
             case "+3.30":
                 return "Asia/Tehran";
