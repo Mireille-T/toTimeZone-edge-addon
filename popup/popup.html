@@ -13,11 +13,12 @@
 </head>
 
 <body id="time-body-overwrite">
+	<hr id="time-hr-header">
 	<header class="center-el">
 		<div class="container">
 			<div class="row">
 				<div class="col-3">
-					<img id="time-convert-icon" src="../icons/128x128.png">
+					<img id="time-convert-icon" src="../icons/128x128.png" alt="Time Zone Converter icon">
 				</div>
 				<div class="col-9">
 					<h1 id="time-convert-title">toTimeZone()</h1>
@@ -88,6 +89,7 @@
 		<br>
 		<div class="center-el center-text">
 			<button id="time-convert-btn" type="button" class="center-el">Convert!</button>
+			<span>&emsp;<i id="time-exchange-icon" class="fas fa-exchange-alt"></i></span>
 		</div>
 		<br>
 		<form class="container">
@@ -147,7 +149,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<p id="time-error-text">Any error text can appear here.</p>
+				<p id="time-error-text"></p>
 			</div>
 		</form>
 	</main>
