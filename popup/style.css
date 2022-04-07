@@ -85,3 +85,7 @@ p{
     margin: 0;
     opacity: 1;
 }
+
+#small{
+    font-size: 10;
+}
