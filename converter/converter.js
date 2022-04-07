@@ -4,8 +4,8 @@ window.onload = function () {
 
     let switchElement = document.getElementById("time-exchange-icon");
     switchElement.onclick = function () {
-        let gmtBeforeElement = document.getElementById("fromInlineFormSelectPref");
-        let gmtAfterElement = document.getElementById("targetInlineFormSelectPref");
+        let gmtBeforeElement = document.getElementById("fromTimeZoneList");
+        let gmtAfterElement = document.getElementById("toTimeZoneList");
 
         let beforeValue = gmtBeforeElement.value;
         let afterValue = gmtAfterElement.value;
@@ -18,29 +18,25 @@ window.onload = function () {
 
 function processConvert() {
     let dateInput = getValueFromId("time-before-convert");
-    let gmtFrom = getValueFromId("fromInlineFormSelectPref");
-    let gmtTarget = getValueFromId("targetInlineFormSelectPref");
+    let gmtFrom = getValueFromId("fromTimeZoneList");
+    let gmtTarget = getValueFromId("toTimeZoneList");
 
     let timeAfterConvert = document.getElementById("time-after-convert");
-
     let errorText = document.getElementById("time-error-text");
     if (dateInput == "") {
         errorText.textContent = "Please select the time you want to convert from!";
         timeAfterConvert.style.color = "rgba(33, 37, 41, 0.4)";
         return;
-    } else if (gmtFrom == "default") {
+    } else if (gmtFrom == "") {
         errorText.textContent =
             "Please select the time zone you want to convert from!";
         timeAfterConvert.style.color = "rgba(33, 37, 41, 0.4)";
         return;
-    } else if (gmtTarget == "default") {
+    } else if (gmtTarget == "") {
         errorText.textContent =
             "Please select the time zone you want to convert to!";
         timeAfterConvert.style.color = "rgba(33, 37, 41, 0.4)";
         return;
-    } else {
-        errorText.textContent = "";
-        timeAfterConvert.style.color = "rgba(33, 37, 41, 1)";
     }
 
     dateInput = dateInput.replace("T", " ");
@@ -48,8 +44,17 @@ function processConvert() {
     let time = dateInput.split(" ")[1];
 
     let dateindate = new Date(date + " " + time + " " + getTimezoneForFrom(gmtFrom));
+    if (dateindate == "Invalid Date") {
+        errorText.textContent = "Please select a valid time zone to convert from!";
+        timeAfterConvert.style.color = "rgba(33, 37, 41, 0.4)";
+        return;
+    }
+    if (getTimezoneForTarget(gmtTarget) == undefined) {
+        errorText.textContent = "Please select a valid time zone to convert to!";
+        timeAfterConvert.style.color = "rgba(33, 37, 41, 0.4)";
+        return;
+    }
 
-    //console.log(dateindate);
     let options = {
         hour12: false,
         year: "numeric",
@@ -60,6 +65,9 @@ function processConvert() {
         timeZone: getTimezoneForTarget(gmtTarget),
         hc: "h23"
     };
+
+    errorText.textContent = "";
+    timeAfterConvert.style.color = "rgba(33, 37, 41, 1)";
     let targetDate = Intl.DateTimeFormat("en-GB", options).format(dateindate);
     setTargetDate(targetDate);
 }
